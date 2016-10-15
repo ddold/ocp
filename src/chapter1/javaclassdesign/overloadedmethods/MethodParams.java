@@ -17,12 +17,25 @@ public class MethodParams {
         return (marks1 + marks2)/2;
     }
 
+    double calcAvg(double marks1, int marks2){
+        return (marks1 + marks2)/2;
+    }
+
     double calcAvg(double marks1, double marks2){
         return (marks1 + marks2)/2;
     }
 
     /**
      * Overloaded methods can define diff number of method params
-     * They can also define diff param types 
+     * They can also define diff param types and change the param positions
+     */
+
+    public static void main(String [] args) {
+        MethodParams params = new MethodParams();
+        System.out.println(params.calcAvg(1, 2));
+    }
+    /**
+     * If method calcAvg(int a, int b) was commented out the preceding code wont compile
+     * as the compiler is not sure what overloaded method to take
      */
 }
