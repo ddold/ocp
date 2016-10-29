@@ -23,4 +23,12 @@ class BirdSanctuary {
             System.out.println("eat");
         }
     };
+
+    public static void main(String [] args){
+        BirdSanctuary birdObj = new BirdSanctuary();
+        birdObj.bird.fly();
+
+        // Won't compile as bird can't access hungry
+        //birdObj.bird.hungry();
+    }
 }

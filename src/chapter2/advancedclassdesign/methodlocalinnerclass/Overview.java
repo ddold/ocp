@@ -5,7 +5,7 @@ package chapter2.advancedclassdesign.methodlocalinnerclass;
  */
 public class Overview {
     /**
-     * - Method local inner class are defined within a static or instance method if a class
+     * - Method local inner class are defined within a static or instance method of a class
      * - A class can define multiple method local inner classes, with the same class name,
      *   but in different methods
      * - Method local inner classes can't be defined using any explicit modifier

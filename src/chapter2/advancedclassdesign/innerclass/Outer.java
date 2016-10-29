@@ -43,4 +43,11 @@ public class Outer {
 class AnotherClass {
     // Following won't compile - need reference to outer class
     //Inner inner;
+
+    Outer outer = new Outer();
+    Outer.Inner inner = outer.new Inner();
+
+    // or else it can be done in one line
+
+    Outer.Inner inner2 = new Outer().new Inner();
 }
