@@ -15,7 +15,12 @@ class ParcelNonGen{
 }
 
 class Phone{}
-class Book{}
+class Book{
+    private String book;
+    Book(String book){
+        this.book = book;
+    }
+}
 
 public class ParcelNonGeneric {
     public static void main(String [] args){

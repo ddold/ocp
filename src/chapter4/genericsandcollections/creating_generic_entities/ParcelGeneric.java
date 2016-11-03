@@ -18,7 +18,7 @@ public class ParcelGeneric {
     public static void main(String [] args){
         // Don't have to include Book in the second <>
         ParcelGen<Book> parcel = new ParcelGen<>();
-        parcel.set(new Book());
+        parcel.set(new Book("val"));
         Book myBook = parcel.get();
 
         // fails to compile
