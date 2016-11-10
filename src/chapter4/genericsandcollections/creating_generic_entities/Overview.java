@@ -5,6 +5,9 @@ package chapter4.genericsandcollections.creating_generic_entities;
  */
 public class Overview {
     /**
+     *
+     *                                  Generics
+     *                                 ----------
      * - You define a generic class, interface, or method by adding one or more type parameters to it
      * - A class that uses a generic class that uses a parameterized type, replacing the formal parameter with
      *   an actual parameter. Also, invalid casts aren't allowed
@@ -57,5 +60,33 @@ public class Overview {
      *   (for unbounded parameter types) or their bounds (for bounded parameter types)
      * - The Java compiler might need to create additional methods referred to as a bridge methods as part of
      *   type erasure process
+     *
+     *
+     *
+     *                                      Type Inference
+     *                                     ----------------
+     * - If you don't specify the type of type arguments to instantiate a generic class or invoke a generic method,
+     *   the Java compiler might be able to infer the argument type by examining the declaration of the generic entity
+     *   and its invocation. If the type can't be inferred you might get a compilation warning, an error or an exception
+     * - By throwing an unchecked warning, the compiler states that it can't ensure type safety. The term unchecked
+     *   refers to operations that might result in violation type safety. This occurs when the compiler doesn't have
+     *   enough type information to perform all type checks
+     * - Starting with Java 7, you can drop the type arguments required to invoke the constructor of a generic class and
+     *   use a diamond - that is, <>. But an attempt to drop the diamond will result in a compilation warning
+     * - A Java compiler can't infer the type parameters by using the diamond in the case of generic methods. It uses
+     *   the type of the actual arguments passed to the method to infer the type parameters
+     *
+     *
+     *
+     *                 Understanding Interoperability of collections using raw and generic types
+     *                ---------------------------------------------------------------------------
+     * - Raw types exist only for generic types
+     * - You can assign a paramaterized type to its raw type, but the reverse will give a compiler warning
+     * - When you assign a parameterized type to its raw type, you lose the type information
+     * - When you mix raw types with generic types, you might get a compiler warning or error or runtime exception
+     * - You can assign an object of a subclass to a reference variable of its base class. But this subtyping rule doesn't
+     *   work when you assign a collection-of-a-derived-class object to a reference variable of a collection of a base class
+     * - If you declare a reference variable List<Object> to a list, whatever you assign to the list must be of generic
+     *   type Object. A subclass of type Object isn't allowed
      */
 }
