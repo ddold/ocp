@@ -9,9 +9,9 @@ public class Overview {
      *                             ------------
      * - The Collection<E> interface represents a group of objects known as its elements
      * - There's no direct implementation of Collection; no concrete class implements it. It's extended
-     *   by more specific interfaces such as Set, List and Queue
+     *   by more specific interfaces such as Sets, Lists and Queue
      * - This collection is used for maximum generality - to work with methods that can accept objects of
-     *   say Set, List and Queue
+     *   say Sets, Lists and Queue
      * - All collection classes are generic
      * - The Map interface doesn't extend the core Collection interface
      * - The Collection interface implements the Iterable interface, which defines method iterator(),
@@ -20,16 +20,16 @@ public class Overview {
      * - The methods of the Collection interface aren't marked as synchronized
      *
      *
-     *                                 List
+     *                                 Lists
      *                                ------
-     * - The List interface models an ordered collection of objects. It returns the objects to you in the
+     * - The Lists interface models an ordered collection of objects. It returns the objects to you in the
      *   order in which you added them. It allows you to store duplicate elements
-     * - In a List you can control the position where you want to store an element. This is the reason that
+     * - In a Lists you can control the position where you want to store an element. This is the reason that
      *   this interface defines overloaded methods to add, remove and retrieve elements at a particular position
-     * - Method listIterator() of List can be used to iterate the complete list or a part of it
+     * - Method listIterator() of Lists can be used to iterate the complete list or a part of it
      *
      *                         #####ArrayList#####
-     * - An ArrayList is a resizable array implementation of the List interface
+     * - An ArrayList is a resizable array implementation of the Lists interface
      * - An ArrayList uses the size variable to keep track of the number of elements inserted in it. By default
      *   an element is added to the first available position in the array. But if you add an element to an
      *   earlier location, the rest of the list elements are shifted to the right
@@ -69,24 +69,24 @@ public class Overview {
      *
      *                     #####LinkedList#####
      * - A LinkedList is like an ArrayList (ordered by index) but the elements are double-linked to each other.
-     *   So besides the methods from List you get a bunch of other methods to add or remove at the beginning and
+     *   So besides the methods from Lists you get a bunch of other methods to add or remove at the beginning and
      *   of this list. So it's a good choice if you need to implement a queue or a stack. A LinkedList is useful
      *   when you need fast insertion or deletion, but iteration might be slower than an ArrayList
-     * - Because a LinkedList implements List, Queue and Deque it implements methods from all these interfaces
+     * - Because a LinkedList implements Lists, Queue and Deque it implements methods from all these interfaces
      *
      *
-     *                          Set
+     *                          Sets
      *                         -----
-     * - The Set interface models the mathematical Set abstraction
-     * - The Set interface doesn't allow duplicate elements and their elements are returned in no particular
+     * - The Sets interface models the mathematical Sets abstraction
+     * - The Sets interface doesn't allow duplicate elements and their elements are returned in no particular
      *   order
-     * - To determine the equality of objects, Set uses their method equals(). For two elements, say e1 and e2,
-     *   if e1.equals(e2) returns true, Set doesn't add both elements
-     * - Set defines methods to add and remove its elements. It also defines methods to query itself for the
+     * - To determine the equality of objects, Sets uses their method equals(). For two elements, say e1 and e2,
+     *   if e1.equals(e2) returns true, Sets doesn't add both elements
+     * - Sets defines methods to add and remove its elements. It also defines methods to query itself for the
      *   occurrence of specific objects
      *
      *                   #####HashSet#####
-     * - Class HashSet implements the Set interface. It doesn't allow the addition of duplicate elements and makes
+     * - Class HashSet implements the Sets interface. It doesn't allow the addition of duplicate elements and makes
      *   no guarantee to the order of retrieval of its elements
      * - HashSet is implemented using a HashMap
      * - To store and retrieve its elements, a HashSet uses a hashing method, accessing an objects hashCode()
@@ -107,7 +107,7 @@ public class Overview {
      * - As with a LinkedList, you can retrieve objects from LinkedHashSet in the order of insertion
      * - Like a HashSet, a LinkedHashSet uses hashing to store and retrieve its elements quickly
      * - A LinkedHashSet permits null values
-     * - LinkedHashSet can be used to create a copy of a Set with the same order as that of the original set
+     * - LinkedHashSet can be used to create a copy of a Sets with the same order as that of the original set
      * - LinkedHashSet's method addAll() accepts Collection object. So you can add elements of an ArrayList to
      *   a LinkedHashSet. The order of insertion of objects from ArrayList to LinkedHashSet is determined by
      *   the order of objects returned by ArrayList's iterator (ArrayList objects can be iterated in the order
@@ -118,11 +118,11 @@ public class Overview {
      *   natural order (achieved by implementing the Comparable interface) or by passing a Comparator while
      *   instantiating a TreeSet. If you fail to specify either of these, TreeSet will throw a runtime exception
      *   when you try to add an object to it
-     * - Unlike the other Set implementations like HashSet and LinkedListSet, which use equals() to compare objects
+     * - Unlike the other Sets implementations like HashSet and LinkedListSet, which use equals() to compare objects
      *   for equality, a TreeSet uses method compareTo() (for Comparable interface) or compare() (for the Comparator
      *   interface) to compare objects for equality and their order
      * - If two object instances are equal according to their method equals(), but not according to their method
-     *   compare() or compareTo(), a Set can exhibit inconsistent behaviour
+     *   compare() or compareTo(), a Sets can exhibit inconsistent behaviour
      * - Classes Enum and File implement the Comparable interface. The natural order of enum constants in the order
      *   in which they're declared. Classes StringBuffer and StringBuilder don't implement the Comparable interface
      */

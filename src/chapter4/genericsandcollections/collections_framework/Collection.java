@@ -20,7 +20,7 @@ public class Collection {
      *              _____________________________|_____________________________
      *             |                             |                            |
      *             |                             |                            |
-     *    Interface List                Interface Set                Interface Queue        Interface Map
+     *    Interface Lists                Interface Sets                Interface Queue        Interface Map
      *                                           ^                            ^                      ^
      *                                           |                            |                      |
      *                                           |                            |                      |

@@ -10,5 +10,5 @@ public class SubtypingGenerics {
     List list = new ArrayList();                        // Allowed
     Object object = new String();                       // Allowed
     List list2 = new ArrayList<String>();               // Allowed
-    //List<Object> list3 = new ArrayList<String>();     // Not Allowed
+    //Lists<Object> list3 = new ArrayList<String>();     // Not Allowed
 }

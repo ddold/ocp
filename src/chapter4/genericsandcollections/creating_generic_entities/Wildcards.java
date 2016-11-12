@@ -19,7 +19,7 @@ class Courier {
 
 public class Wildcards {
     // Following won't compile
-    //List<Gift> wishList = new ArrayList<Book>();
+    //Lists<Gift> wishList = new ArrayList<Book>();
 
     public static void main(String [] args){
         // This solves the previous issue

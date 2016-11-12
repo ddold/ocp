@@ -5,7 +5,7 @@ package chapter4.genericsandcollections.collections_framework;
  */
 public class Deque {
     /**
-     *         interface List                      interface Queue
+     *         interface Lists                      interface Queue
      *                  ^                                   ^
      *                  |                                   |
      *                  |                                   |

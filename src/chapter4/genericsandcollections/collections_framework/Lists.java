@@ -3,10 +3,10 @@ package chapter4.genericsandcollections.collections_framework;
 /**
  * Created by dan on 11/12/16.
  */
-public class List {
+public class Lists {
     /**
      *
-     *      interface List                             interface Queue
+     *      interface Lists                             interface Queue
      *               ^                                          ^
      *               |                                          |
      *               |_______ class ArrayList          interface Deque
@@ -15,7 +15,7 @@ public class List {
      *               |_______ class LinkedList _________________|
      *
      *
-     * Methods of List interface
+     * Methods of Lists interface
      * -------------------------
      *
      * Modification Methods:

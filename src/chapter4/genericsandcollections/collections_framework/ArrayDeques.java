@@ -19,7 +19,7 @@ public class ArrayDeques {
     public static void main(String [] args){
         String[] strArray = {"A1", "B2", "C3"};
 
-        // Arrays.asList() converts array to List
+        // Arrays.asList() converts array to Lists
         ArrayDeque<String> arrayDeque = new ArrayDeque<>(Arrays.asList(strArray));
 
         // push() adds element to beginning

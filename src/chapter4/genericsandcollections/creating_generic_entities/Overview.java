@@ -42,7 +42,7 @@ public class Overview {
      *   instance, or static variable; and a return value of generic types. But you can't use it as a type
      *   argument to invoke a generic method, create a generic class instance, or for a subtype
      * - You can assign an instance of a subclass, say String, to a variable of its base class, Object. But you
-     *   can't assign ArrayList<String> to a variable of type List<Object>. Inheritance doesn't apply to type
+     *   can't assign ArrayList<String> to a variable of type Lists<Object>. Inheritance doesn't apply to type
      *   parameters
      * - When you use a wildcard to declare you variables or method parameters you lose the functionality of
      *   adding objects to a collection
@@ -86,7 +86,7 @@ public class Overview {
      * - When you mix raw types with generic types, you might get a compiler warning or error or runtime exception
      * - You can assign an object of a subclass to a reference variable of its base class. But this subtyping rule doesn't
      *   work when you assign a collection-of-a-derived-class object to a reference variable of a collection of a base class
-     * - If you declare a reference variable List<Object> to a list, whatever you assign to the list must be of generic
+     * - If you declare a reference variable Lists<Object> to a list, whatever you assign to the list must be of generic
      *   type Object. A subclass of type Object isn't allowed
      */
 }
