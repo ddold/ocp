@@ -77,6 +77,53 @@ public class Overview {
      *
      *                          Set
      *                         -----
+     * - The Set interface models the mathematical Set abstraction
+     * - The Set interface doesn't allow duplicate elements and their elements are returned in no particular
+     *   order
+     * - To determine the equality of objects, Set uses their method equals(). For two elements, say e1 and e2,
+     *   if e1.equals(e2) returns true, Set doesn't add both elements
+     * - Set defines methods to add and remove its elements. It also defines methods to query itself for the
+     *   occurrence of specific objects
      *
+     *                   #####HashSet#####
+     * - Class HashSet implements the Set interface. It doesn't allow the addition of duplicate elements and makes
+     *   no guarantee to the order of retrieval of its elements
+     * - HashSet is implemented using a HashMap
+     * - To store and retrieve its elements, a HashSet uses a hashing method, accessing an objects hashCode()
+     *   value to determine the bucket in which it should be stored
+     * - Method hashCode() doesn't call method equals()
+     * - Method equals() doesn't call method hashCode()
+     * - Classes should override their hashCode() methods efficiently to enable collection classes like HashSet
+     *   to store them in separate buckets
+     * - A HashSet allows storing of only one null element. All subsequent calls to storing null values are
+     *   ignored
+     * - Class HashSet uses a hashing algorithm to store, remove and retrieve its elements. So it offers constant
+     *   time performance for these operations, assuming that the hash function disperses its elements properly
+     *   among its buckets
+     *
+     *                #####LinkedHashSet#####
+     * - A LinkedHashSet offers the benefits of a HashSet combined with a LinkedList. It maintains a double
+     *   linked list running through its entries
+     * - As with a LinkedList, you can retrieve objects from LinkedHashSet in the order of insertion
+     * - Like a HashSet, a LinkedHashSet uses hashing to store and retrieve its elements quickly
+     * - A LinkedHashSet permits null values
+     * - LinkedHashSet can be used to create a copy of a Set with the same order as that of the original set
+     * - LinkedHashSet's method addAll() accepts Collection object. So you can add elements of an ArrayList to
+     *   a LinkedHashSet. The order of insertion of objects from ArrayList to LinkedHashSet is determined by
+     *   the order of objects returned by ArrayList's iterator (ArrayList objects can be iterated in the order
+     *   of their insertion)
+     *
+     *                  #####TreeSet#####
+     * - A TreeSet stores all its unique elements in a sorted order. The elements are ordered either on their
+     *   natural order (achieved by implementing the Comparable interface) or by passing a Comparator while
+     *   instantiating a TreeSet. If you fail to specify either of these, TreeSet will throw a runtime exception
+     *   when you try to add an object to it
+     * - Unlike the other Set implementations like HashSet and LinkedListSet, which use equals() to compare objects
+     *   for equality, a TreeSet uses method compareTo() (for Comparable interface) or compare() (for the Comparator
+     *   interface) to compare objects for equality and their order
+     * - If two object instances are equal according to their method equals(), but not according to their method
+     *   compare() or compareTo(), a Set can exhibit inconsistent behaviour
+     * - Classes Enum and File implement the Comparable interface. The natural order of enum constants in the order
+     *   in which they're declared. Classes StringBuffer and StringBuilder don't implement the Comparable interface
      */
 }
