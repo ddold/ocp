@@ -22,6 +22,17 @@ public class Overview {
      *   your code won't compile
      * - In the longer form of an assert statement, you can create an object for the second expression. Note that a constructor
      *   creates and returns an object, and so it satisfies the requirement that the second expression must return a value
-     * - You can test multiple types of invariants in your code by using assertions:
+     * - You can test multiple types of invariants in your code by using assertions: internal invariants, control-flow invariants and class invariants
+     * - An assertion is used to verify that code shouldn't execute, never executes
+     * - Assertions can't be used to verify unreachable code because unreachable code doesn't compile
+     * - You can use assertions at locations that you assume control should never be reached
+     * - You must not use assertions to check method parameters for public methods
+     * - You can use assertions to check method parameters for private methods
+     * - You must not use assertions to modify variable values or the state of an object
+     * - Assertions can be enabled or disabled, don't use them to define code that must execute in all cases
+     * - Use the command-line option -ea or -enableassertions to enable assertions
+     * - Use the command-line option -da or -disableassertions to disable assertions
+     * - All assert statements are equivalent to blank statements if the assertions are disabled
+     * - A generalized -da switch (no assertions enabled) correspond to the default JRE behavior
      */
 }
