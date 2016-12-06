@@ -25,12 +25,28 @@ public class BufferedIOByteStreams {
         System.out.println("Milliseconds Elapsed : " + (end - start));
     }
 
+    public static void buffered(FileInputStream in, FileOutputStream out) throws IOException {
+        BufferedInputStream bis = new BufferedInputStream(in);
+        BufferedOutputStream bos = new BufferedOutputStream(out);
+
+        long start = System.currentTimeMillis();
+
+        int data;
+        while((data = bis.read()) != -1) {
+            bos.write(data);
+        }
+
+        long end = System.currentTimeMillis();
+
+        System.out.println("Milliseconds Elapsed : " + (end - start));
+    }
+
     public static void main(String [] args){
-        File dir = new File("/home/dan/Downloads/");
+        File dir = new File("/home/dan/IdeaProjects/OCP/src/chapter7/java_io_fundamentals/byte_stream_io");
         try (FileInputStream in = new FileInputStream(new File(dir, "jls7.pdf"));
              FileOutputStream out = new FileOutputStream(new File(dir, "jls7_2.pdf"))) {
 
-            nonBuffered(in, out);
+            buffered(in, out);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
