@@ -1,0 +1,7 @@
+aStringPartcharhtruea12.2341.4557845java.io.PrintWriter@16315e0854true
+a
+12.23
+41.45
+57845
+java.io.PrintWriter@16315e08
+54
