@@ -15,11 +15,12 @@ public class QueryTable {
 
     public void query(){
         ResultSet res = null;
+        Statement statement = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
             connection = CreateConnection.standardConnection();
-            Statement statement = connection.createStatement();
+            statement = connection.createStatement();
 
             res = statement.executeQuery("SELECT * FROM people where id = 1");
 
@@ -34,6 +35,14 @@ public class QueryTable {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                statement.close();
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 

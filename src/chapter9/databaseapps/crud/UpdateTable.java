@@ -14,11 +14,12 @@ public class UpdateTable {
 
     public int updateTable(){
         int ret = 0;
+        Statement statement = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
             connection = CreateConnection.standardConnection();
-            Statement statement = connection.createStatement();
+            statement = connection.createStatement();
 
             ret = statement.executeUpdate
                     ("UPDATE people " +
@@ -30,6 +31,13 @@ public class UpdateTable {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return ret;
     }
